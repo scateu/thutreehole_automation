@@ -27,8 +27,16 @@ def Say(words):
 def getPoem():
     poems = open('./poems')
     line = linecache.getline('./poems',random.randint(1,1500))
-    return '刚在C楼门口与身着黑色连衣裙高贵冷艳的女子擦身而过，现在仍心神向往。我明明已经有可爱美丽的女朋友了，为什么还会这样把持不住！！烦啊！！突然想起了一句诗:'+line
+
+    #return '刚在C楼门口与身着黑色连衣裙高贵冷艳的女子擦身而过，现在仍心神向往。我明明已经有可爱美丽的女朋友了，为什么还会这样把持不住！！烦啊！！突然想起了一句诗:'+line
     #return '今天走在路上我突然想到了一句诗，不知道有没有男生能理解我此刻的心情：'+line+'   真想有个肩膀依靠啊....'
+    return '我艹艹艹艹艹！%s居然只有%d？！！！尼玛！气得我想起了一句诗：'%(getWords(['微积分','大物','高代','普物','基物实验','马克思主义新闻观','高级新闻采写','数理逻辑','概率论','量子力学','信号与系统','高等电动力学']),random.randint(95,100))+line
+
+def getWords(wordlist):
+    if len(wordlist) == 0:
+        return ' '
+    i = random.randint(0,len(wordlist)-1)
+    return wordlist[i]
 
 if __name__ == '__main__':
     import time
