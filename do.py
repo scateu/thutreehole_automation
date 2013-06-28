@@ -27,7 +27,8 @@ def Say(words):
 def getPoem():
     poems = open('./poems')
     line = linecache.getline('./poems',random.randint(1,1500))
-    return '今天走在路上我突然想到了一句诗，不知道有没有男生能理解我此刻的心情：'+line+'   真想有个肩膀依靠啊....'
+    return '刚在C楼门口与身着黑色连衣裙高贵冷艳的女子擦身而过，现在仍心神向往。我明明已经有可爱美丽的女朋友了，为什么还会这样把持不住！！烦啊！！突然想起了一句诗:'+line
+    #return '今天走在路上我突然想到了一句诗，不知道有没有男生能理解我此刻的心情：'+line+'   真想有个肩膀依靠啊....'
 
 if __name__ == '__main__':
     import time
